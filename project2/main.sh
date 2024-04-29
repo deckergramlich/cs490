@@ -7,9 +7,6 @@ reference=/proj/SIUE-CS590-490/reference/hg38.fa # path to reference genome
 
 while IFS= read -r url
 do
-    if [[ -z "$url" ]]; then
-        continue
-    fi
     fileName=$(basename $url) # gets the .bed.gz file name from parsing the url
     baseName=${fileName%%.*} # gets the file name from parsing the .bed.gz file
     posBed = ~/project2/data/bedsPositives/posBed$baseName.bed # path to file for the positive bed file
